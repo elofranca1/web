@@ -83,6 +83,10 @@ document.getElementById('submit-button').addEventListener('click', function () {
         .then(html => {
             // 使用服务器响应的新 HTML 更新页面
             document.documentElement.innerHTML = html;
+            // 创建一个新的script元素
+            const newScript = document.createElement('script');
+            newScript.src = '/static/script2.js'; // 设置静态目录下的script2.js为src
+            document.body.appendChild(newScript);
         })
         .catch(error => console.error('Error:', error));
 });

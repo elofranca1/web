@@ -3,24 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>绘本创作</title>
+    <title>绘本展示</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='styles2.css') }}" />
 </head>
 
 <body>
 
     <div id="carousel">
-        <div class="slide active">
-            <img src="path/to/image1.jpg" alt="Image 1">
-            <p>相应的文本内容 1</p>
-        </div>
-        <div class="slide">
-            <img src="path/to/image2.jpg" alt="Image 2">
-            <p>相应的文本内容 2</p>
-        </div>
-        <!-- 更多的图片和文本 -->
-        <div class="arrow" id="left-arrow" onclick="moveSlide(-1)">&#10094;</div>
-        <div class="arrow" id="right-arrow" onclick="moveSlide(1)">&#10095;</div>
+            {% for slide in slides %}
+            <div class="slide">
+                <img src="{{ slide.image }}" alt="Slide Image">
+                <p>{{ slide.text|replace('\n', '<br>')|safe }}</p>
+            </div>
+            {% endfor %}
+        <div class="arrow" id="left-arrow" >&#10094;</div>
+        <div class="arrow" id="right-arrow" >&#10095;</div>
     </div>
 
     <script src="{{ url_for('static',filename='script2.js') }}"></script>

@@ -16,7 +16,7 @@
  }
 
 #carousel {
-    position: ;
+    position: relative;
     width: 70%;
     margin: auto;
 }
@@ -25,6 +25,7 @@
     display: none;
     position: absolute;
 }
+
 
 .active {
     display: block;
