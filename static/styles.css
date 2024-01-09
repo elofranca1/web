@@ -1,0 +1,281 @@
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     font-family: 'Courier New', Courier, monospace;
+     background-image: url('https://s2.loli.net/2024/01/07/wsl9jOI6cXWP2pr.png');
+     background-size: contain;
+     background-position: center center;
+     background-repeat: no-repeat;
+
+ }
+
+ #exit-button {
+     width: 95px;
+     height: 95px;
+     background: url('https://s2.loli.net/2024/01/07/PFHRasl9Kwe4xnt.png') no-repeat center center;
+     background-size: contain;
+     border: none;
+     cursor: pointer;
+ }
+
+
+
+ /* Rest of the styles... */
+
+ #main-container {
+     width: 80%;
+     margin: 20px auto;
+     display: flex;
+     flex-direction: row;
+     align-items: flex-start;
+ }
+
+ #monster-info {
+     width: 397px;
+     height: 517px;
+     position: absolute;
+     top: 20%;
+     left: 14%;
+     background-image: url('https://s2.loli.net/2024/01/08/xbtS6hVZRHNa3XP.png');
+     background-size: contain;
+     background-position: center center;
+     background-repeat: no-repeat;
+     box-sizing: border-box;
+     border: none;
+     padding: 20px;
+     /* 添加内边距 */
+     display: flex;
+     flex-direction: column;
+     /* 子元素垂直排列 */
+     justify-content: space-between;
+     /* 子元素之间分散对齐 */
+ }
+
+ 
+ .name,.personality,.ability {
+     width: 100%;
+     /* 宽度 */
+     display: flex;
+     /*align-items: center center;*/
+     margin-bottom: 10px;
+     /* 和下一块内容的间距 */
+ }
+ 
+
+ .info-label{
+
+    left: 50px;
+
+    background-image: url("https://s2.loli.net/2024/01/08/2zOGWwrHcCKYDX8.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+            align-items: flex-end;
+                /* 使内容与底部对齐 */
+            /* 垂直居中 */
+            justify-content: center;
+            /* 水平居中 */
+            font-size: 20px;
+                height: 46px;
+                width: 110px;
+                    /* 设置一个高度 */
+            /* 或者根据需要调整字体大小 */
+            /* 增加底部内边距以偏下对齐文本 */
+            /* 其他样式保持不变 */
+ }
+ .info-value {
+flex-grow: 1;
+    /* 让值占据剩余空间 */
+    display: flex;
+    align-items: center;
+    /* 此属性将文本垂直居中 */
+    justify-content: center;
+    /* 此属性将文本水平居中 */
+    background-image: url("https://s2.loli.net/2024/01/08/aRFsr8ojUL7dnOf.png");
+    background-size: contain;
+    /* 背景图充满整个元素 */
+    background-position: center;
+    /* 背景图居中显示 */
+    background-repeat: no-repeat;
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #000;
+    /* 文字颜色，根据需要更改以确保可见性 */
+    text-align: center;
+    /* 水平居中文本 */
+    height: 100%;
+    /* 设置一个高度值以适应背景图 */
+
+    height: 45px;
+    width: 152px;
+ }
+
+
+
+#footer-image {
+    background-image: url('https://s2.loli.net/2024/01/08/SUZ9jWHFBROMLEw.png');
+    /* 替换为实际的图片路径 */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 74px;
+    /* 根据您的图片调整高度 */
+}
+ #header-image {
+     background-image: url('https://s2.loli.net/2024/01/08/A9BDXpqdPGKJlj4.png');
+     /* 替换为实际的图片路径 */
+     background-size: contain;
+     /* 或者可以使用 'contain' 根据设计需求选择 */
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 105px;
+     top: 90%;
+     /* 根据您的图片调整高度 */
+ }
+ 
+
+
+
+
+ #storybook-creation {
+     position: absolute;
+     /* 如果还没有设置的话 */
+
+     left: 40%;
+     top: 17%;
+     flex: 3;
+     padding: 20px;
+     background: none;
+ }
+
+ .section {
+     margin-bottom: 20px;
+ }
+
+ .section button {
+     background: #f1e6d2;
+     border: 1px solid #5a3e16;
+     margin-right: 10px;
+     cursor: pointer;
+ }
+
+ .section textarea {
+     width: 100%;
+     background: #f1e6d2;
+     border: 1px solid #5a3e16;
+     margin-top: 10px;
+ }
+
+ #scene-title,
+ #theme-title,
+ #story-summary-title,
+ #length-title {
+     height: 69px;
+     width: 245px;
+     /* 标题区域的高度，根据实际图片调整 */
+     left: 500px;
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
+
+ #scene-title {
+     top: 20%;
+     background-image: url('https://s2.loli.net/2024/01/07/k26xX4jR7zJGT9u.png');
+     /* 设置故事场景标题背景图 */
+ }
+
+ #theme-title {
+     top: 40%;
+     background-image: url('https://s2.loli.net/2024/01/07/pYmD5gPzk3GX4xT.png');
+     /* 设置主题标题背景图 */
+ }
+
+ #story-summary-title {
+     top: 60%;
+     background-image: url('https://s2.loli.net/2024/01/07/Bwo6HnLfaUVpJ3Y.png');
+     /* 设置故事梗概标题背景图 */
+ }
+
+ #length-title {
+     top: 80%;
+     background-image: url('https://s2.loli.net/2024/01/07/K3Oq9bPXL2iEeHm.png');
+     /* 设置篇幅标题背景图 */
+ }
+
+ .carousel-container {
+     position: relative;
+     max-width: 600px;
+     /* 根据实际需要调整轮播图的最大宽度 */
+     margin: auto;
+     overflow: hidden;
+ }
+
+ .carousel-slide {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     /* 从头开始排列图片 */
+     position: relative;
+
+
+ }
+
+ .carousel-slide .slide-btn {
+
+     border: none;
+     background: none;
+     padding: 0;
+     cursor: pointer;
+     margin: 0 10px;
+     /* 图片之间的间距为20px */
+ }
+
+ .carousel-slide .slide-btn img {
+     max-width: none;
+     /* 移除最大宽度限制 */
+     height: 100px;
+     /* 设置统一的图片高度 */
+     width: auto;
+     /* 宽度自适应保持图片比例 */
+     transition: transform 0.5s ease;
+ }
+
+ /* 确保箭头按钮不会占用图片空间 */
+ .prev,
+ .next {
+     position: absolute;
+     top: 23%;
+     height: 117px;
+     width: 31px;
+     transform: translateY(-50%);
+     z-index: 10;
+     background: none;
+     border: none;
+     cursor: pointer;
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
+
+ .prev {
+     left: 0px;
+     /* 左箭头位置 */
+     background-image: url('https://s2.loli.net/2024/01/08/IzyVO2vAesr5Z9d.png');
+     /* 左箭头图片URL */
+ }
+
+ .next {
+     right: -10px;
+     /* 右箭头位置 */
+     background-image: url('https://s2.loli.net/2024/01/08/kDrog9iPdEtp6jq.png');
+     /* 右箭头图片URL */
+ }
