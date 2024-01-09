@@ -36,7 +36,8 @@
             </div>
         
             <!-- 生成新妖兽的按钮 -->
-                <div id="footer-image"></div>
+                <button id="footer-image"></button>
+
 
             
         </div>
@@ -50,14 +51,17 @@
             <!-- 故事场景选择区的其他内容 -->
             <div class="carousel-container">
                 <div class="carousel-slide">
-                    <button class="slide-btn" onclick="alert('Scene 1 clicked');"><img
+                <input type="hidden" id="selected-scene">
+
+                    <button class="slide-btn" onclick="selectScene('Scene 1',this);"><img
                             src="https://s2.loli.net/2024/01/08/dg9hwTeasDEPQVA.png" alt="Scene 1"></button>
-                    <button class="slide-btn" onclick="alert('Scene 2 clicked');"><img
+                    <button class="slide-btn" onclick="selectScene('Scene 2',this);"><img
                             src="https://s2.loli.net/2024/01/08/628TH9vC1fEd3e4.png" alt="Scene 2"></button>
-                    <button class="slide-btn" onclick="alert('Scene 3 clicked');"><img
+                    <button class="slide-btn" onclick="selectScene('Scene 3',this);"><img
                             src="https://s2.loli.net/2024/01/08/yZ8sG4pkS6ahBVr.png" alt="Scene 3"></button>
-                    <button class="slide-btn" onclick="alert('Scene 4 clicked');"><img
+                    <button class="slide-btn" onclick="selectScene('Scene 4',this);"><img
                             src="https://s2.loli.net/2024/01/08/3Se2NgnOvb1diFA.png" alt="Scene 4"></button>
+
                 </div>
             </div>
             <button class="prev" onclick="moveSlide(-1)"></button>
@@ -67,26 +71,41 @@
             <div id="theme-title"></div>
             <!-- 内涵主题选择区的其他内容 -->
             <div class="section" id="theme-selection">
-                <button>主题1</button>
-                <button>主题2</button>
+
+                <input type="hidden" id="selected-theme">
+                <button onclick="selectTheme('主题1')">主题1</button>
+                <button onclick="selectTheme('主题2')">主题2</button>
             </div>
         
-        
+
             <div id="story-summary-title"></div>
             <!-- 故事梗概区域的其他内容 -->
             <div class="section" id="story-summary">
-                <textarea rows="4" placeholder="请输入一个有趣的故事梗概"></textarea>
+                <textarea id="story-summary-input" rows="4" placeholder="请输入一个有趣的故事梗概"></textarea>
             </div>
         
             <div id="length-title"></div>
             <!-- 篇幅选择区的其他内容 -->
             <div class="section" id="length-selection">
-                <button>3页</button>
-                <button>5页</button>
+            <input type="hidden" id="selected-length">
+
+                <button onclick="selectLength('3页')">3页</button>
+                <button onclick="selectLength('5页')">5页</button>
             </div>
-        
+
+            </div>
         </div>
+
+        <button id="submit-button" ></button>
+
+
+        
+
+        
+           
+
     </div>
+    
 
     <script src="{{ url_for('static',filename='script.js') }}"></script>
 </body>

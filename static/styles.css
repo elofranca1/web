@@ -31,9 +31,7 @@
  #main-container {
      width: 80%;
      margin: 20px auto;
-     display: flex;
-     flex-direction: row;
-     align-items: flex-start;
+     
  }
 
  #monster-info {
@@ -126,8 +124,21 @@ flex-grow: 1;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: transparent;
     height: 74px;
     /* 根据您的图片调整高度 */
+    border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        /* 移除边距 */
+        cursor: pointer;
+        font-size: 0;
+        /* 有时候需要设置字体大小为0，以防止额外的空间 */
+        line-height: 0;
+        /* 移除行高影响 */
+        overflow: hidden;
+        /* 防止内容溢出 */
 }
  #header-image {
      background-image: url('https://s2.loli.net/2024/01/08/A9BDXpqdPGKJlj4.png');
@@ -231,6 +242,8 @@ flex-grow: 1;
 
  .carousel-slide .slide-btn {
 
+    background-color: transparent;
+
      border: none;
      background: none;
      padding: 0;
@@ -279,3 +292,29 @@ flex-grow: 1;
      background-image: url('https://s2.loli.net/2024/01/08/kDrog9iPdEtp6jq.png');
      /* 右箭头图片URL */
  }
+
+ .dimmed {
+     opacity: 0.5;
+     /* 使内容半透明 */
+     cursor: not-allowed;
+     /* 更改鼠标样式 */
+ }
+
+
+#submit-button {
+    background-image: url('https://s2.loli.net/2024/01/09/J5rkCoGhzPRV3YN.png');
+    /* 替换为实际的图片路径 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    height: 94px;
+    width: 405px;
+    position: absolute;
+    top: 87%; 
+    left: 40%;
+            cursor: pointer;
+   
+}
+

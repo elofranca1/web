@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>妖兽展示</title>
+</head>
+
+<body>
+    {% for i in range(num_pages) %}
+    <div>
+        <!-- 显示图片和文本 -->
+        <img src="path/to/image{{ i + 1 }}.jpg" alt="Image {{ i + 1 }}">
+        <p>相应的文本内容</p>
+    </div>
+    {% endfor %}
+</body>
+
+</html>

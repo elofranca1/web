@@ -35,6 +35,33 @@ def randomGenerate():
     return jsonify(monster_info)
 
 
+@app.route('/submit-data', methods=['POST'])
+def submit_data():
+    data = request.json
+    selected_scene = data.get('selected_scene')
+    monster_name = data.get('monster_name')
+    monster_personality = data.get('monster_personality')
+    monster_ability = data.get('monster_ability')
+    selected_theme = data.get('selected_theme')
+    selected_length = data.get('selected_length')
+    story_summary = data.get('story_summary')
+
+    print("Selected Scene:", selected_scene)
+    print("Monster Name:", monster_name)
+    print("Monster Personality:", monster_personality)
+    print("Monster Ability:", monster_ability)
+    print("Selected Theme:", selected_theme)
+    print("Selected Length:", selected_length)
+    print("Story Summary:", story_summary)
+    if(selected_length=="3页"):
+        return render_template('pages.html', num_pages=3)
+    else:
+        return render_template('pages.html', num_pages=5)
+
+
+   
+
+
 if __name__ == '__main__':
     app.run(
         host='0.0.0.0',
