@@ -7,7 +7,7 @@ import asyncio
 from fastapi_poe.types import ProtocolMessage
 from fastapi_poe.client import get_bot_response
 
-
+g
 def remove_extra_whitespace(text):
     cleaned_text = re.sub(r'\s+', '', text)
     return cleaned_text
