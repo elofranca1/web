@@ -86,7 +86,7 @@ def submit_data():
 
     server_message = asyncio.run(get_responses(api_key, send_message))
 
-    matches = re.findall(r'#([^$]+)\s+\n+\$([^#]+)',
+  f  matches = re.findall(r'#([^$]+)\s+\n+\$([^#]+)',
                          server_message, re.MULTILINE | re.DOTALL)
 
     # 初始化章节主题和内容的列表
